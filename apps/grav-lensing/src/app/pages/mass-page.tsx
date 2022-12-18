@@ -74,12 +74,12 @@ const strokeLine = (context: CanvasRenderingContext2D,
 export const MassPage = () => {
   const history = useHistory()
   const [obstaclePos, setObstaclePos] = useState<number>(0)
-  const [obstacleRadius, setObstacleRadius] = useState<number>(50)
+  const [obstacleRadius, setObstacleRadius] = useState<number>(60)
   const [lineLength, setLineLength] = useState('50%')
 
   const handleNext = useCallback(() => {
     amplitude.getInstance().logEvent('Click on Next Button',{'CurrentPage':'Mass Bending Light'})
-    history.push('/tutorial/darkmatter')
+    history.push('/tutorial/newdarkmatter')
     ClickSound.play()
     ObstacleMass.stop()
   }, [history])
@@ -148,7 +148,7 @@ export const MassPage = () => {
           labelFontSize={labelFontSize}
           tutorialText="Try changing the obstacle's mass"
           onValueUpdated={handleMassAdjust}
-          initialValue={-0.5}
+          initialValue={0}
           sliderSound={ObstacleMass}
         />
         </div>

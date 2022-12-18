@@ -68,7 +68,7 @@ export const Game = (props: RouteComponentProps<{ level: string }>) => {
   }, [level, setCustomGame, props.location.search])
 
   return (
-    <Background imgSrc='/assets/img/gl-bg-1.jpg'>
+    <Background imgSrc='/assets/img/star-background.jpg'>
       <GameManager
         defaultGridSize={gridSize}
         defaultDarkMatterCount={darkMatterCount}

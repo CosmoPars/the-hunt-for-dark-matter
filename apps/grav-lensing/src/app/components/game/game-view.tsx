@@ -161,7 +161,7 @@ export const GameView = ({cols, rows, difficulty}:GameViewProps) => {
       </GameGridContainer>
       <BottomCenter width='60%'>
         <BottomText>
-          {firstClick && <h2 style = {{fontSize:'2.3em',fontWeight:600,lineHeight:'1.35em',paddingBottom:'2em'}}>Click on squares in the sky to conduct a scan</h2>}
+          {firstClick && <h2 style = {{fontSize:'2.3em',fontWeight:600,lineHeight:'1.35em',paddingBottom:'2em'}}>Click on squares in the sky to conduct a scan.</h2>}
         </BottomText>
       </BottomCenter>
       <BottomRight>

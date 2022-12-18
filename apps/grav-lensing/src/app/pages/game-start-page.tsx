@@ -75,14 +75,14 @@ export const GameStartPage = () => {
   }, [history])
 
   return (
-    <Background imgSrc='/assets/img/gl-bg-1.jpg'>
+    <Background imgSrc='/assets/img/star-background.jpg'>
       <TopLeft>
           <HeaderLogo/>
       </TopLeft>
       <ContainerDiv>
         <StyledText>
 
-            We've hidden some clumps of dark matter in this
+            We've hidden some clumps of dark matter in a
             <br />virtual universe. Click on the squares in the sky to
             <br />conduct a scan of the square's galaxies.
 

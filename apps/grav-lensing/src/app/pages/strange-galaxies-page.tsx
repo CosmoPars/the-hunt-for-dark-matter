@@ -21,7 +21,7 @@ export const StrangeGalaxiesPage = () => {
 
   const handleNext = useCallback(() => {
     amplitude.getInstance().logEvent('Click on Next Button',{'CurrentPage':'Strange Galaxies'})
-    history.push('/tutorial/stackedgalaxies')
+    history.push('/tutorial/stackedgalaxiesLoader')
     ClickSound.play()
   }, [history])
 

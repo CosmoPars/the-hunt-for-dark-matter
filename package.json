@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "start": "nx serve grav-lensing",
     "build": "nx build",
     "test": "nx test"
   },
@@ -41,10 +41,10 @@
     "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
     "jest": "27.2.3",
+    "nx": "13.9.6",
     "prettier": "2.6.2",
     "ts-jest": "27.0.5",
-    "typescript": "~4.3.5",
-    "nx": "13.9.6"
+    "typescript": "~4.3.5"
   },
   "dependencies": {
     "@emotion/react": "11.8.2",
@@ -55,6 +55,7 @@
     "gl-matrix": "^3.4.3",
     "howler": "^2.2.3",
     "jose": "^4.6.0",
+    "memfs": "^3.4.12",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-draggable": "^4.4.4",

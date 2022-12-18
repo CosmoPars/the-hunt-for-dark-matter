@@ -26,5 +26,5 @@ export const TutorialSteps = [
   '/tutorial/star',
   '/tutorial/obstacle',
   '/tutorial/darkmatter',
-  '/tutorial/strangegalaxies'
+  '/tutorial/stackedgalaxiesLoader'
 ]

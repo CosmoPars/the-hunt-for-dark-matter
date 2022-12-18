@@ -21,7 +21,10 @@ import { useAmbientFn } from "../components/audio/ambient-context"
 import amplitude from 'amplitude-js'
 import { ContainedImage } from "../components/contained-image"
 
-const initialMassValue = 0
+import { StackRestartButton } from "../components/buttons/stackrestartbutton"
+
+
+const initialMassValue = 0.025
 const massValueMultiplier = 0.05
 
 export const EndOfTutPage = () => {
@@ -62,6 +65,14 @@ export const EndOfTutPage = () => {
     return false
   }
 
+  const handleRestack = useCallback(() => {
+    amplitude.getInstance().logEvent('Click on Restack Button',{'CurrentPage':'End of Tutorial'})
+    history.push('/tutorial/stackedgalaxiesloader')
+    ClickSound.play()
+    // BeginSound.play()
+
+  }, [history])
+
   return (
     <Background imgSrc='/assets/img/gl-bg-1.jpg'>
       <TutorialHeader currentChapter={3} />
@@ -77,7 +88,7 @@ export const EndOfTutPage = () => {
         </MagnifyViewer>
       </Magnify>
       <BottomRight>
-        {showVictory === true?(<NextButton children = {'FINISH'} onClick={handleNext} />):(<NextButton onClick={handleNext} />)}
+        {showVictory === true?(<NextButton children = {'FINISH'} onClick={handleNext} />):( <NextButton onClick={handleNext}/> )}
 
       </BottomRight>
       <BottomLeft>
@@ -93,7 +104,7 @@ export const EndOfTutPage = () => {
           sliderSound={ObstacleMass}
         />
 
-        {showVictory === false ?(<TutorialText heading={"We've hidden some dark matter for you"} subheading = {"At the top you can see the galaxies. At the bottom we've stacked the galaxies in each box. Adjust the dark matter mass slider on the left till you can spot the dark matter, then click where it is."}/>)
+        {showVictory === false ?(<TutorialText heading={"We've hidden some dark matter for you."} subheading = {"At the top you can see the galaxies. At the bottom we've stacked some of them in a grid. Adjust the dark matter mass slider on the left until you think you know where the dark matter is, then click on it."}/>)
         :(<TutorialText heading={"Well done, you discovered Dark Matter!"} subheading = {"You're now ready to track down all the invisible dark matter in our virtual Universe. Good luck dark matter hunter!"}/>)
         }
 

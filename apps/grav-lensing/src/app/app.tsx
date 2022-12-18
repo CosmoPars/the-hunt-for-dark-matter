@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import { DarkMatterPage } from './pages/dark-matter-page'
 import { DirectPage } from './pages/direct-page'
 import { InteractiveLensPage } from './pages/interactive-lens-page'
+import { InteractiveLensPage2 } from './pages/interactive-lens2-page'
 import { MassPage } from './pages/mass-page'
 import { ObstaclePage } from './pages/obstacle-page'
 import { StarPage } from './pages/star-page'
@@ -10,12 +11,19 @@ import { StrangeGalaxiesPage } from './pages/strange-galaxies-page'
 import { GameStartPage } from './pages/game-start-page'
 import { TitlePage } from './pages/title-page'
 import { StackedGalaxiesPage } from './pages/stacked-galaxies-page'
+import { StackedGalaxiesPage1 } from './pages/stacked1-galaxies1'
+import { StackedGalaxiesPage2 } from './pages/stacked2-galaxies2'
+import { StackedGalaxiesPage3 } from './pages/stacked3-galaxies3'
 import { Routes } from './routes'
 import Game from './game'
 import { EndOfTutPage } from './pages/end-of-tutorial-page'
 import { AmbientProvider } from './components/audio/ambient-provider'
 import { ImagePreloader } from './components/image-preloader'
 import { preloadImages } from './config'
+import { NewDarkMatterPage } from './pages/newdark-matterpage'
+import { StackedGalaxiesLoaderPage } from './pages/stackedVideoInitial'
+
+
 
 const StyledApp = styled.div`
   font-family: canada-type-gibson,sans-serif;
@@ -78,10 +86,16 @@ export function App() {
             <Route path='/tutorial/obstacle' component={ObstaclePage} />
             <Route path='/tutorial/mass' component={MassPage} />
             <Route path='/tutorial/darkmatter' component={DarkMatterPage} />
+            <Route path='/tutorial/newdarkmatter' component={NewDarkMatterPage } />
             <Route path='/tutorial/interactivelens' component={InteractiveLensPage} />
+            <Route path='/tutorial/interactivelens2' component={InteractiveLensPage2} />
             <Route path='/tutorial/strangegalaxies' component={StrangeGalaxiesPage} />
-            <Route path={`${Routes.Game}/:level`} component={Game} />
+            <Route path={`${Routes.Game}/:level`} component={Game} /> 
+            <Route path='/tutorial/stackedgalaxiesLoader' component={StackedGalaxiesLoaderPage} />
             <Route path='/tutorial/stackedgalaxies' component={StackedGalaxiesPage} />
+            <Route path='/tutorial/stackedgalaxies1' component={StackedGalaxiesPage1} />
+            <Route path='/tutorial/stackedgalaxies2' component={StackedGalaxiesPage2} />
+            <Route path='/tutorial/stackedgalaxies3' component={StackedGalaxiesPage3} />
             <Route path={Routes.Game} component={GameStartPage} />
             <Route path='/tutorial/ending' component={EndOfTutPage} />
             <Route path='/' component={TitlePage} />

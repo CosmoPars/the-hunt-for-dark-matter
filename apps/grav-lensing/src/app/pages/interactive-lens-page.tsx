@@ -38,7 +38,7 @@ export const InteractiveLensPage = () => {
 
   const handleNext = useCallback(() => {
     amplitude.getInstance().logEvent('Click on Next Button',{'CurrentPage':'Interactive Lens'})
-    history.push('/tutorial/strangegalaxies')
+    history.push('/tutorial/interactivelens2')
     ClickSound.play()
   }, [history])
 

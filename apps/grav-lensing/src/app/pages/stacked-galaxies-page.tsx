@@ -41,7 +41,7 @@ export const StackedGalaxiesPage = () => {
 
   const handleNext = useCallback(() => {
     amplitude.getInstance().logEvent('Click on Next Button',{'CurrentPage':'Stacked Galaxies'})
-    history.push('/tutorial/ending')
+    history.push('/tutorial/stackedgalaxies1')
     ClickSound.play()
   }, [history])
   const [firstChange, setFirstChange] = useState(false)
@@ -117,5 +117,6 @@ export const StackedGalaxiesPage = () => {
         </TutStyledText> */}
       </BottomLeft>
     </Background>
+
   )
 }

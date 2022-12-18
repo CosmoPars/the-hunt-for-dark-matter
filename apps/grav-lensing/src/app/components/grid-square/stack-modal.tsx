@@ -12,6 +12,7 @@ type StackProp ={
     scanResult?: ScanResult
     position:[number,number]
     boardSize:[number,number]
+
 }
 
 const StackOverLay = styled.div`
@@ -101,8 +102,13 @@ const DarkMatterText = styled.div`
     color:yellow;
 `
 
+
+
 export const StackModal = ({open, scanResult, onClose, position, boardSize}: StackProp) => {
   const [lenPos,setLenPos] = useState<[number,number]>()
+
+  const [ counter, setCounter ] = useState(0)
+  const handleClick1 = () =>{ setCounter(counter+1)}
 
   useEffect(()=>{
     const winHeight = window.innerHeight-101
@@ -113,7 +119,7 @@ export const StackModal = ({open, scanResult, onClose, position, boardSize}: Sta
     setLenPos([(position[0]+0.5-boardMed[0])*gridWidth,(position[1]+0.75-boardMed[1])*gridHeight])
   },[position, boardSize])
 
-  if(open === true && scanResult){
+  if(open === true && scanResult){   
     if(scanResult.hasDarkMatter){
       return(
       <>
@@ -129,9 +135,14 @@ export const StackModal = ({open, scanResult, onClose, position, boardSize}: Sta
       </>
       )
     }
+    if (counter == 2){
+     return(
+      <></>
+     )
+    }
     return(
       <>
-      <StackOverLay onClick={onClose}/>
+      <StackOverLay />
         <div>
           <ImageDiv>
             {scanResult.distortion && <UpdatedAnimatedModal
@@ -146,7 +157,7 @@ export const StackModal = ({open, scanResult, onClose, position, boardSize}: Sta
           </ImageDiv>
           <StackFooter>
             <FooterText>No Dark Matter to be found here</FooterText>
-            <PrimaryButton fontSize={'1.2em'} width={'6em'} onClick={() => {ClickSound.play(); onClose();}}>TRY AGAIN</PrimaryButton>
+            <PrimaryButton fontSize={'1.2em'} width={'6em'} onClick={() => {ClickSound.play(); onClose(); handleClick1();}}>TRY AGAIN</PrimaryButton>
           </StackFooter>
         </div>
       </>

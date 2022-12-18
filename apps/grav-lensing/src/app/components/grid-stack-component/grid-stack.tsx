@@ -101,16 +101,48 @@ export const GridStack = (props:LayoutProps&GridStackProps) =>{
             {buttonList.map((e, index) =>(e.rows===1&&e.columns===1?(
             <StackButton
             key={index}
-            layers = {['assets/img/stack/gl-stack-flattened.png']}
+            layers = {['assets/img/stack/blackimage.png']} 
             position = {[0.5,0.5]}
-            lenses={[{ position: [0, 0], mass: 0 }]}
-            onClick = {e.onClick}/>):(
+            lenses={[{ position: [0, 2], mass: 0 }]}
+            onClick = {e.onClick}/>):( 
+                
+            e.rows===1&&e.columns===2?(
+                <StackButton
+                key={index}
+                layers = {['assets/img/stack/blackimage.png']} 
+                position = {[0.5,0.5]}
+                lenses={[{ position: [0, 2], mass: 0 }]}
+                onClick = {e.onClick}/>):( 
+
+            e.rows===3&&e.columns===2?(
+                <StackButton
+                key={index}
+                layers = {['assets/img/stack/blackimage.png']} 
+                position = {[0.5,0.5]}
+                lenses={[{ position: [0, 2], mass: 0 }]}
+                onClick = {e.onClick}/>):( 
+
+            e.rows===2&&e.columns===3?(
+                <StackButton
+                key={index}
+                layers = {['assets/img/stack/blackimage.png']} 
+                position = {[0.5,0.5]}
+                lenses={[{ position: [0, 2], mass: 0 }]}
+                onClick = {e.onClick}/>):( 
+                
+            
             <StackButton
             key={index}
             layers = {['assets/img/stack/gl-stack-flattened.png']}
             position = {e.position}
             lenses={[{ position: e.lensPosition, mass: props.mass }]}
-            onClick = {e.onClick}/>)))}
+            onClick = {e.onClick}/>
+            
+            
+            ))))))}             
+
         </GridContainer>
+
+         
     )
 }

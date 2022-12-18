@@ -28,6 +28,7 @@ const ButtonPill = styled.div<ButtonStyleProps>`
   color: white;
   font-weight: 600;
   margin: 10px;
+  z-index: 10;
   box-shadow: 0px 0px 10px rgba(255,255,255,0.4);
   &:hover {
     box-shadow: 0px 0px 10px rgba(255,255,255,0.8);

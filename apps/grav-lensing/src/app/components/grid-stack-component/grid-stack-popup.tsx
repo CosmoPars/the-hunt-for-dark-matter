@@ -122,7 +122,7 @@ export default function StackPopUp({open, scanResult, onClose}: StackProp){
           {/* {scanResult.distortion && <StackResult matrix={scanResult.distortion} layers={stackLayers} />} */}
           </ImageDiv>
           <StackFooter>
-            <FooterText>No Dark Matter to be found here</FooterText>
+            <FooterText>No Dark Matter to be found here.</FooterText>
             <PrimaryButton width='6em' fontSize={'1.2em'} onClick ={onClose}>TRY AGAIN</PrimaryButton>
           </StackFooter>
         </div>

@@ -99,9 +99,11 @@ export const TitlePage = () => {
       <TopRight>
         <SkipButton>{'skip tutorial'}</SkipButton>
       </TopRight>
-      <FooterBar height="5em">
+      <FooterBar height="5em" >
         <Logo height="80%" src='/assets/img/logos/LOGO-ERC_negatif_long.png' alt='European Research Council Logo' />
         <Logo height="55%" src='/assets/img/logos/laCaixaFoundation.png' alt='la Caixa Foundation Logo' />
+        <Logo height="55%" src='/assets/img/logos/Royal_society_transparent.png' alt='The Royal Society Logo' />
+        <Logo height="55%" src='/assets/img/logos/Centre-national.png' alt='Centre-national Logo' />
       </FooterBar>
       <BottomRight>
         <HelpButton />
